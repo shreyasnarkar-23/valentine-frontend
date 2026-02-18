@@ -55,10 +55,13 @@ function create(){
   }
 
   fetch("https://website-backend-2fey.onrender.com/create", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name })
-  })
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({ name: name })
+})
+
   .then(res => res.json())
   .then(data => {
     const link = `${window.location.origin}/index.html?token=${token}`;
@@ -77,4 +80,5 @@ function create(){
 
 </body>
 </html>
+
 
