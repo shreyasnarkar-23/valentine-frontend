@@ -1,0 +1,188 @@
+body{
+  margin:0;
+  background:linear-gradient(135deg,#ff416c,#ff4b2b);
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:Poppins,sans-serif;
+  color:white;
+}
+.container{
+  background:rgba(0, 0, 0, 0.3);
+  padding:25px;
+  width:90%;
+  max-width:360px;
+  border-radius:20px;
+  text-align:center;
+}
+/* container inside the card that holds options */
+#options {
+  position: relative;       /* important: NO moves inside this box */
+  height: 160px;            /* enough vertical space for yes + no */
+}
+
+/* both buttons basic */
+button {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 28px;
+  font-size: 15px;
+  cursor: pointer;
+  display: block;
+}
+/* Normal question option buttons (Q1–Q4) */
+.option-btn {
+  width: 80%;
+  margin: 10px auto;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  font-size: 15px;
+  display: block;
+  background: #ffffff;
+  color: #333;
+  cursor: pointer;
+}
+
+
+/* YES button: centered, on top */
+.yes {
+  width: 70%;
+  margin: 8px auto 0;
+  background: #ffffff;
+  color: #ff416c;
+  font-weight: 600;
+  z-index: 100;            /* make sure it stays above NO */
+  position: relative;
+}
+
+/* NO button: same size, initially below YES, absolutely positioned */
+.no {
+  width: 70%;
+  background: #ff1744;
+  color: white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* center horizontally */
+  top: 88px;                   /* place below YES */
+  transition: left 0.06s linear, top 0.06s linear;
+  z-index: 50;
+  pointer-events: auto;        /* allow hover detection; JS will block clicks */
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.explode-heart {
+  position: fixed;
+  font-size: 24px;
+  pointer-events: none;
+  animation: explode 1.2s ease-out forwards;
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2) translate(var(--x), var(--y));
+    opacity: 0;
+  }
+}
+/* Background heart layer */
+#bg-hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Floating heart style */
+.bg-heart {
+  position: absolute;
+  bottom: -20px;
+  font-size: 20px;
+  animation: floatHeart linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes floatHeart {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-120vh) scale(1.8);
+    opacity: 0;
+  }
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(270deg, #ff416c, #ff4b2b, #ff6a88);
+  background-size: 600% 600%;
+  animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Background heart layer */
+#bg-hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bg-heart {
+  position: absolute;
+  bottom: -20px;
+  font-size: 18px;
+  opacity: 0.6;
+  animation: floatHeart linear forwards;
+}
+
+@keyframes floatHeart {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-120vh) scale(1.8);
+    opacity: 0;
+  }
+}
+
+.final-box 
+{
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Create Valentine Link</title>
+  <style>
+    body{
+      background:#ff416c;
+      font-family:sans-serif;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      color:white;
+    }
+    .box{
+      background:rgba(0,0,0,0.3);
+      padding:25px;
+      border-radius:15px;
+      width:300px;
+      text-align:center;
+    }
+    input,button{
+      width:100%;
+      padding:10px;
+      margin-top:10px;
+      border:none;
+      border-radius:20px;
+    }
+    button{ background:white; color:#ff416c; font-weight:bold; }
+    button{
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h3>Create Valentine Link 💘</h3>
+  <input id="name" placeholder="Enter her name" />
+  <button type="button" onclick="create()">Generate Link</button>
+
+  <p id="result"></p>
+</div>
+
+<script>
+function create(){
+  const name = document.getElementById("name").value.trim();
+
+  if(!name){
+    alert("Please enter a name ❤️");
+    return;
+  }
+
+  fetch("https://website-backend-2fey.onrender.com/create", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name })
+  })
+  .then(res => res.json())
+  .then(data => {
+    const link = `https://amazing-kataifi-fe3280.netlify.app/index.html?token=${data.token}`;
+    document.getElementById("result").innerHTML =
+      `<p style="margin-top:10px;">Copy & share:</p>
+       <a href="${link}" target="_blank">${link}</a>`;
+  })
+  .catch(err => {
+    alert("Backend not reachable ❌");
+    console.error(err);
+  });
+}
+</script>
+
+
+</body>
+</html>
