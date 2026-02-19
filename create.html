@@ -64,7 +64,8 @@ function create(){
 
   .then(res => res.json())
   .then(data => {
-    const link = `${window.location.origin}/index.html?token=${token}`;
+  const link = `${window.location.origin}/index.html?token=${data.token}`;
+
 
     document.getElementById("result").innerHTML =
       `<p style="margin-top:10px;">Copy & share:</p>
@@ -80,5 +81,6 @@ function create(){
 
 </body>
 </html>
+
 
 
