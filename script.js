@@ -97,9 +97,10 @@ function proposal(){
   setTimeout(() => {
     document.getElementById("app").innerHTML = `
   <div class="fade-in final-box">
-    <h1 style="font-size:2.5em;">😌 I knew you wouldn’t say no.</h1>
+    <h1 style="font-size:2.5em;">😌 I had a feeling you’d say yes.</h1>
     <p style="font-size:1.3em; margin-top:15px;">
-      ❤️Here’s to new memories and better conversations.❤️
+      Here’s to new memories and better conversations.<br><br>
+      ❤️ Let’s see where this goes… 💫✨
     </p>
   </div>
 `;
