@@ -71,11 +71,7 @@ function proposal(){
   yes.innerText = "Yes 💖";
   yes.className = "yes";
   yes.onclick = () => {
-  fetch(`https://website-backend-2fey.onrender.com/use/${token}`).catch((err) => {
-   console.log(err);
-   alert("Backend error — check console");
-});
-
+  fetch(`https://website-backend-2fey.onrender.com/use/${token}`).catch(()=>{});
 
   // ❤️ Heart explosion
   for(let i = 0; i < 25; i++){
@@ -203,4 +199,3 @@ setInterval(createHeart, 400);
 
 
 setTimeout(()=>document.body.innerHTML="⏳ Session Expired",180000);
-
