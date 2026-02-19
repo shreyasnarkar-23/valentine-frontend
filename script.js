@@ -99,8 +99,7 @@ function proposal(){
   <div class="fade-in final-box">
     <h1 style="font-size:2.5em;">😌 I knew you wouldn’t say no.</h1>
     <p style="font-size:1.3em; margin-top:15px;">
-      Here’s to new memories and better conversations.<br><br>
-      ❤️ Happy Friendship 💗✨
+      ❤️Here’s to new memories and better conversations.❤️
     </p>
   </div>
 `;
