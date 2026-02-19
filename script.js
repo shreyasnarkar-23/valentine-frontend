@@ -100,7 +100,7 @@ function proposal(){
     <h1 style="font-size:2.5em;">😌 I had a feeling you’d say yes.</h1>
     <p style="font-size:1.3em; margin-top:15px;">
       Here’s to new memories and better conversations.<br><br>
-      ❤️ Let’s see where this goes… 💫✨
+      ❤️ Let’s see where this goes… 💫🤞
     </p>
   </div>
 `;
